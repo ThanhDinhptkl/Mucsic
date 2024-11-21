@@ -20,7 +20,6 @@ import LoginScreen from "./screens/LoginScreen";
 import LoginForm from "./screens/LoginForm";
 import SignUp from "./screens/SingUpScreen";
 import LoginWithPhone from "./screens/LoginWithPhone";
-import OTPVerification from "./screens/OTPVerification";
 
 const Stack = createStackNavigator();
 
@@ -38,11 +37,6 @@ function AppNavigator() {
         name="LoginScreen"
         component={LoginScreen}
         options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="OTPVerification"
-        component={OTPVerification}
-        options={{ title: "OTP Verification" }}
       />
       <Stack.Screen
         name="LoginForm"
