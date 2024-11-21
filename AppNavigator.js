@@ -19,13 +19,15 @@ import PlayerScreen from "./screens/PlayerScreen";
 import LoginScreen from "./screens/LoginScreen";
 import LoginForm from "./screens/LoginForm";
 import SignUp from "./screens/SingUpScreen";
+import LoginWithPhone from "./screens/LoginWithPhone";
+import OTPVerification from "./screens/OTPVerification";
 
 const Stack = createStackNavigator();
 
 function AppNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="LoginScreen" // Đặt màn hình mặc định là LoginScreen
+      initialRouteName="LoginScreen"
       screenOptions={{
         headerStyle: { backgroundColor: "#231b2e" },
         headerTintColor: "#fff",
@@ -38,6 +40,11 @@ function AppNavigator() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
+        name="OTPVerification"
+        component={OTPVerification}
+        options={{ title: "OTP Verification" }}
+      />
+      <Stack.Screen
         name="LoginForm"
         component={LoginForm}
         options={{ title: "Login" }}
@@ -46,6 +53,11 @@ function AppNavigator() {
         name="SignUp"
         component={SignUp}
         options={{ title: "Sign Up" }}
+      />
+      <Stack.Screen
+        name="LoginWithPhone"
+        component={LoginWithPhone}
+        options={{ title: "Login With Phone" }}
       />
       <Stack.Screen
         name="HomeAudioListing"
