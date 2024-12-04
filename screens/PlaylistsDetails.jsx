@@ -129,36 +129,48 @@ export default function PlaylistsDetails() {
 const sampleSongs = [
   {
     id: '1',
-    title: 'FLOWER',
-    artist: 'Jessica Gonzalez',
-    duration: '2,1M . 3:36',
-    image: require('../images/MyLibrary/Image101.png'),
-    audio: require('../audio/AnhKhongCanDam-CaoNamThanh-4039734.mp3'), // File audio
+    title: 'Đào Nương\nHoàng Vương\n2,1M . 3:06',
+    image: require('../images/Avatar/daoNuong.jpg'),
+    audio: require('../audio/DaoNuong.mp3'),
   },
   {
     id: '2',
-    title: 'Shape of You',
-    artist: 'Anthony Taylor',
-    duration: '68M . 3:35',
-    image: require('../images/MyLibrary/Image102.png'),
+    title: 'Anh Không Can Đảm\nCao Nam Thành\n2,8M . 4:25',
+    image: require('../images/Avatar/anhKhongCanDam.jpg'),
     audio: require('../audio/AnhKhongCanDam-CaoNamThanh-4039734.mp3'),
   },
   {
-    id: '3',
-    title: 'Blingding Lights',
-    artist: 'Ashley Scott',
-    duration: '93M . 3:20',
-    image: require('../images/MyLibrary/Image103.png'),
-    audio: require('../audio/AnhKhongCanDam-CaoNamThanh-4039734.mp3'),
-  },
-];
+  id: '3',
+  title: 'Chỉ Là Không Cùng Nhau\nTăng Phúc, Trương Thảo Nhi\n4,8M . 3:52',
+  image: require('../images/Avatar/chiLaKhongCungNhau.jpg'),
+  audio: require('../audio/ChiLaKhongCungNhau.mp3'),
+},
+{
+  id: '4',
+  title: 'Lạc Trôi\nSơn Tùng M-TP\n9M . 3.53',
+  image: require('../images/Avatar/lacTroi.jpg'),
+  audio: require('../audio/LacTroi.mp3'),
+},
+{
+  id: '5',
+  title: 'Chỉ Bằng Cái Gật Đầu\nYan Nguyễn\n23M . 4:06',
+  image: require('../images/Avatar/chiBangCaiGatDau.jpg'),
+  audio: require('../audio/ChiBangCaiGatDau.mp3'),
+},
+{
+  id: '6',
+  title: 'Nói Có Khó Nhưng Vui\nYan Nguyễn\n10M . 4:12',
+  image: require('../images/Avatar/noiCoKhoNhungVui.jpg'),
+  audio: require('../audio/ChiLaKhongCungNhau.mp3'),
+},
 
+];
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f9f9f9',
     padding: 16,
-    marginBottom: 60, // Chừa không gian cho MusicControlBar
+    marginBottom: 60, 
   },
   cungDong: {
     flexDirection: 'row',

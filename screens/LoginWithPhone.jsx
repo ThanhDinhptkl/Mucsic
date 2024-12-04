@@ -1,19 +1,33 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  ImageBackground,
+  Alert,
+} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const LoginWithPhone = ({ navigation }) => {
   const [phoneNumber, setPhoneNumber] = useState('');
 
   const handleLogin = () => {
-    // Xử lý đăng nhập với số điện thoại (có thể thêm logic để gửi OTP hoặc điều hướng)
-    if (phoneNumber) {
-      alert(`Đăng nhập với số điện thoại: ${phoneNumber}`);
-      // Điều hướng tới màn hình tiếp theo nếu cần
-      // navigation.navigate('OTPVerification'); // Ví dụ: điều hướng tới màn hình xác nhận OTP
-    } else {
-      alert('Vui lòng nhập số điện thoại');
+    if (!phoneNumber) {
+      Alert.alert('Lỗi', 'Vui lòng nhập số điện thoại.');
+      return;
     }
+
+    const otp = Math.floor(100000 + Math.random() * 900000); // Tạo mã OTP ngẫu nhiên (6 chữ số)
+
+    Alert.alert(
+      'Thông báo',
+      `Mã OTP đã được gửi đến số ${phoneNumber}. Mã giả lập: ${otp}`, // Hiển thị mã OTP giả lập
+    );
+
+    // Điều hướng tới màn hình OTP, truyền mã OTP và số điện thoại
+    navigation.navigate('OTPVerification', { phone: phoneNumber, otp });
   };
 
   return (

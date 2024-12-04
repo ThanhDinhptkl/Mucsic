@@ -6,39 +6,57 @@ import { useNavigation } from '@react-navigation/native';
 const data = [
   {
     id: '1',
-    title: 'FLOWER\nJessica Gonzalez\n2,1M . 3:36',
-    image: require('../images/MyLibrary/Image101.png'),
-    audio: require('../audio/qzt1sl5h1y.mp3'),
+    title: 'Đào Nương\nHoàng Vương\n2,1M . 3:06',
+    image: require('../images/Avatar/daoNuong.jpg'),
+    audio: require('../audio/DaoNuong.mp3'),
   },
   {
     id: '2',
-    title: 'Shape of You\nAnthony Taylor\n68M . 03:35',
-    image: require('../images/MyLibrary/Image102.png'),
-    audio: require('../audio/AnhKhongCanDam-CaoNamThanh-4039734.mp3'),
+    title: 'Một Bước Yêu Vạn Dặm Đau\nMr.Siro\n8,8M . 4:58',
+    image: require('../images/Avatar/motBuocYeuVanDam.jpg'),
+    audio: require('../audio/motBuocYeuVanDamDau.mp3'),
   },
   {
   id: '3',
-  title: 'Blingding Lights\nAshley Scott\n4 songs',
-  image: require('../images/MyLibrary/Image103.png'),
-  audio: require('../audio/qzt1sl5h1y.mp3'),
+  title: 'Chỉ Là Không Cùng Nhau\nTăng Phúc, Trương Thảo Nhi\n4,8M . 3:52',
+  image: require('../images/Avatar/chiLaKhongCungNhau.jpg'),
+  audio: require('../audio/ChiLaKhongCungNhau.mp3'),
 },
 {
   id: '4',
-  title: 'Levitating\nAnthony Taylor\n9M . 07:48',
-  image: require('../images/MyLibrary/Image104.png'),
-  audio: require('../audio/qzt1sl5h1y.mp3'),
+  title: 'Lạc Trôi\nSơn Tùng M-TP\n9M . 3.53',
+  image: require('../images/Avatar/lacTroi.jpg'),
+  audio: require('../audio/LacTroi.mp3'),
 },
 {
   id: '5',
-  title: 'Astronaut in the Ocean\nPedro Moreno\n23M . 3:36',
-  image: require('../images/MyLibrary/Image105.png'),
-  audio: require('../audio/qzt1sl5h1y.mp3'),
+  title: 'Chỉ Bằng Cái Gật Đầu\nYan Nguyễn\n23M . 4:06',
+  image: require('../images/Avatar/chiBangCaiGatDau.jpg'),
+  audio: require('../audio/ChiBangCaiGatDau.mp3'),
 },
 {
   id: '6',
-  title: 'Dynamite\nElena Jimeneez\n10M . 06:22',
-  image: require('../images/MyLibrary/Image106.png'),
-  audio: require('../audio/qzt1sl5h1y.mp3'),
+  title: 'Nói Có Khó Nhưng Vui\nYan Nguyễn\n10M . 4:12',
+  image: require('../images/Avatar/noiCoKhoNhungVui.jpg'),
+  audio: require('../audio/ChiLaKhongCungNhau.mp3'),
+},
+{
+  id: '7',
+  title: 'Ngỡ Như Giấc Mơ\nChu Duyên\n1,2M . 3:58',
+  image: require('../images/Avatar/ngoNhuGiacMo.jpg'),
+  audio: require('../audio/ngoNhuGiacMo.mp3'),
+},  
+{
+  id: '8',
+  title: 'Ai Chung Tình Được Mãi\nĐinh Tùng Huy, ACV\n1,9M . 5:35',
+  image: require('../images/Avatar/aiChungTinhDuocMai.jpg'),
+  audio: require('../audio/aiChungTinhDuocMai.mp3'),
+},
+{
+  id: '9',
+  title: 'Anh Không Can Đảm\nCao Nam Thành\n2,8M . 4:25',
+  image: require('../images/Avatar/anhKhongCanDam.jpg'),
+  audio: require('../audio/AnhKhongCanDam-CaoNamThanh-4039734.mp3'),
 },
 
 ];
@@ -103,7 +121,7 @@ export default function MyLibrary() {
       {/* Navigation Buttons */}
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Playlists')}>
-          <Text style={styles.buttonText}>Playlists</Text>
+          <Text style={styles.buttonText}>Playlist</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('NewTag')}>
           <Text style={styles.buttonText}>New Tag</Text>
